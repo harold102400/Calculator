@@ -1,48 +1,48 @@
-let operacion = prompt("Que operacion desea hacer? 1-sumar 2-restar 3-multiplicar 4-dividir");
+let operation = prompt("What operation would like to do? 1-sum 2-sub 3-mult 4-div");
 let operando1;
 let operando2;
-let resultado;
+let result;
 
-if ( operacion >= 1 && operacion <= 4){
-    operando1 = parseInt(prompt("Introduce primer numero:"));
-    operando2 = parseInt(prompt("Introduce segundo numero:"));
+if ( operation >= 1 && operation <= 4){
+    operando1 = parseInt(prompt("Introduce the first number:"));
+    operando2 = parseInt(prompt("Introduce the second number:"));
 }
 
 
 
-function suma(numero1, numero2){
-    return numero1 + numero2;
+function add(number1, number2){
+    return number1 + number2;
 }
 
-function resta(numero1, numero2){
-    return numero1 - numero2;
+function sub(number1, number2){
+    return number1 - number2;
 }
-function multiplicacion(numero1, numero2){
-    return numero1 * numero2;
+function mult(number1, number2){
+    return number1 * number2;
 }
-function division(numero1, numero2){
-    return numero1 / numero2;
+function div(number1, number2){
+    return number1 / number2;
 }
 
-switch(operacion){
+switch(operation){
     case "1":
-        resultado = suma(operando1, operando2)
-        document.getElementById("result").innerHTML = "El resultado es " + resultado;
+        result = add(operando1, operando2)
+        document.getElementById("result-on-screen").innerHTML = "The result is " + result;
         break;
     case "2":
-        resultado = resta(operando1, operando2)
-        document.getElementById("result").innerHTML = "El resultado es " + resultado;
+        result = sub(operando1, operando2)
+        document.getElementById("result-on-screen").innerHTML = "The result is " + result;
         break;
     case "3":
-        resultado = multiplicacion(operando1, operando2)
-        document.getElementById("result").innerHTML = "El resultado es " + resultado;
+        result = mult(operando1, operando2)
+        document.getElementById("result-on-screen").innerHTML = "The result is " + result;
         break;
     case "4":
-        resultado = division(operando1, operando2)
-        document.getElementById("result").innerHTML = "El resultado es " + resultado;
+        result = div(operando1, operando2)
+        document.getElementById("result-on-screen").innerHTML = "The result is  " + result;
         break;  
     default:
-        alert("MMG");
+        alert("Please use a valid number");
         break;
 }
 
